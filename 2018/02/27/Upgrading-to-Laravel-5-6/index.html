@@ -92,16 +92,17 @@
 
 
 
-<meta name="description" content="Personal Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Nay Zaw Oo">
-<meta property="og:url" content="https://nayzawoo.github.io/blog/index.html">
+<meta name="description" content="app/Exceptions/Handler.php +    protected function whoopsHandler() +    { +        if (app()-&amp;gt;runningInConsole()) { +            return new \NunoMaduro\Collision\Handler(); +        } +        return">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L6.5">
+<meta property="og:url" content="https://nayzawoo.github.io/blog/2018/02/27/Upgrading-to-Laravel-5-6/index.html">
 <meta property="og:site_name" content="Nay Zaw Oo">
-<meta property="og:description" content="Personal Blog">
+<meta property="og:description" content="app/Exceptions/Handler.php +    protected function whoopsHandler() +    { +        if (app()-&amp;gt;runningInConsole()) { +            return new \NunoMaduro\Collision\Handler(); +        } +        return">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-02-26T20:31:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nay Zaw Oo">
-<meta name="twitter:description" content="Personal Blog">
+<meta name="twitter:title" content="L6.5">
+<meta name="twitter:description" content="app/Exceptions/Handler.php +    protected function whoopsHandler() +    { +        if (app()-&amp;gt;runningInConsole()) { +            return new \NunoMaduro\Collision\Handler(); +        } +        return">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://nayzawoo.github.io/blog/"/>
+  <link rel="canonical" href="https://nayzawoo.github.io/blog/2018/02/27/Upgrading-to-Laravel-5-6/"/>
 
 
 
 
 
-  <title>Nay Zaw Oo</title>
+  <title>L6.5 | Nay Zaw Oo</title>
   
 
 
@@ -170,9 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -255,9 +254,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -287,9 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/02/27/Upgrading-to-Laravel-5-6/" itemprop="url">L6.5</a></h1>
+          <h1 class="post-title" itemprop="name headline">L6.5</h1>
         
 
         <div class="post-meta">
@@ -350,9 +347,7 @@
       
 
       
-        
-          
-            <p><strong>app/Exceptions/Handler.php</strong></p>
+        <p><strong>app/Exceptions/Handler.php</strong></p>
 <pre class=" language-diff"><code class="language-diff"><span class="token inserted">+    protected function whoopsHandler()</span>
 <span class="token inserted">+    {</span>
 <span class="token inserted">+        if (app()->runningInConsole()) {</span>
@@ -418,8 +413,6 @@
 <span class="token inserted">+ logging.php</span>
 </code></pre>
 
-          
-        
       
     </div>
     
@@ -436,163 +429,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://nayzawoo.github.io/blog/blog/2018/02/26/Laravel-Mix-Setup-For-Vue-Async-Components/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Nay Zaw Oo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://secure.gravatar.com/avatar/3de49f2fe7a17c88d225994df06889ba?size=300">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nay Zaw Oo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/02/26/Laravel-Mix-Setup-For-Vue-Async-Components/" itemprop="url">Laravel Mix Setup For Vue Async Components</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-26T00:13:58+06:30">
-                2018-02-26
-              </time>
+              <a href="/blog/2018/02/26/Laravel-Mix-Setup-For-Vue-Async-Components/" rel="next" title="Laravel Mix Setup For Vue Async Components">
+                <i class="fa fa-chevron-left"></i> Laravel Mix Setup For Vue Async Components
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/blog/2018/02/26/Laravel-Mix-Setup-For-Vue-Async-Components/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/02/26/Laravel-Mix-Setup-For-Vue-Async-Components/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="Install-Babel-Plugin-For-Dynamic-Import-Syntax"><a href="#Install-Babel-Plugin-For-Dynamic-Import-Syntax" class="headerlink" title="Install Babel Plugin For Dynamic Import Syntax"></a>Install Babel Plugin For Dynamic Import Syntax</h3><blockquote>
-<p>yarn add -D babel-plugin-syntax-dynamic-import</p>
-</blockquote>
-<h3 id="Create-babelrc"><a href="#Create-babelrc" class="headerlink" title="Create .babelrc"></a>Create <strong>.babelrc</strong></h3><pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-    <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"syntax-dynamic-import"</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h3 id="Add-Webpack-Config-in-in-webpack-mix-js"><a href="#Add-Webpack-Config-in-in-webpack-mix-js" class="headerlink" title="Add Webpack Config in in webpack.mix.js"></a>Add Webpack Config in in <strong>webpack.mix.js</strong></h3><pre class=" language-js"><code class="language-js">mix<span class="token punctuation">.</span><span class="token function">webpackConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        chunkFilename<span class="token punctuation">:</span> <span class="token string">'chunks/[name].[chunkhash].js'</span><span class="token punctuation">,</span>
-        publicPath<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h3 id="Replace-Your-Code"><a href="#Replace-Your-Code" class="headerlink" title="Replace Your Code"></a>Replace Your Code</h3><pre class=" language-diff"><code class="language-diff"><span class="token deleted">- Vue.component('example', require('./components/ExampleComponent.vue'));</span>
-<span class="token inserted">+ Vue.component('example', () => import('./components/ExampleComponent.vue'));</span>
-</code></pre>
-<h3 id="Ref"><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h3><ul>
-<li><a href="https://github.com/JeffreyWay/laravel-mix/issues/936" target="_blank" rel="noopener">https://github.com/JeffreyWay/laravel-mix/issues/936</a></li>
-<li><a href="https://github.com/JeffreyWay/laravel-mix/issues/1249" target="_blank" rel="noopener">https://github.com/JeffreyWay/laravel-mix/issues/1249</a></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -602,10 +460,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -613,6 +472,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -793,10 +663,10 @@
   
 
   
-    <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -813,6 +683,18 @@
       <script id="dsq-count-scr" src="https://personal-blog-4etncnw35b.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://nayzawoo.github.io/blog/2018/02/27/Upgrading-to-Laravel-5-6/';
+          this.page.identifier = '2018/02/27/Upgrading-to-Laravel-5-6/';
+          this.page.title = 'L6.5';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://personal-blog-4etncnw35b.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
