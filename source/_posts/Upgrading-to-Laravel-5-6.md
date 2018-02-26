@@ -1,5 +1,5 @@
 ---
-title: L6.5
+title: Laravel5.5 -> 5.6
 date: 2018-02-27 02:44:21
 tags:
 ---
