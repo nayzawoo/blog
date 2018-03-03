@@ -94,13 +94,13 @@
 
 <meta name="description" content="Personal Blog">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Nay Zaw Oo">
+<meta property="og:title" content="Notes">
 <meta property="og:url" content="https://nayzawoo.github.io/blog/index.html">
-<meta property="og:site_name" content="Nay Zaw Oo">
+<meta property="og:site_name" content="Notes">
 <meta property="og:description" content="Personal Blog">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nay Zaw Oo">
+<meta name="twitter:title" content="Notes">
 <meta name="twitter:description" content="Personal Blog">
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <title>Nay Zaw Oo</title>
+  <title>Notes</title>
   
 
 
@@ -183,7 +183,7 @@
     <div class="custom-logo-site-title">
       <a href="/blog/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Nay Zaw Oo</span>
+        <span class="site-title">Notes</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -270,201 +270,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://nayzawoo.github.io/blog/blog/2018/02/27/Upgrading-to-Laravel-5-6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Nay Zaw Oo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://secure.gravatar.com/avatar/3de49f2fe7a17c88d225994df06889ba?size=300">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nay Zaw Oo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2018/02/27/Upgrading-to-Laravel-5-6/" itemprop="url">Laravel5.5 -> 5.6</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-27T02:44:21+06:30">
-                2018-02-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/blog/2018/02/27/Upgrading-to-Laravel-5-6/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/02/27/Upgrading-to-Laravel-5-6/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>app/Exceptions/Handler.php</strong></p>
-<pre class=" language-diff"><code class="language-diff"><span class="token inserted">+    protected function whoopsHandler()</span>
-<span class="token inserted">+    {</span>
-<span class="token inserted">+        if (app()->runningInConsole()) {</span>
-<span class="token inserted">+            return new \NunoMaduro\Collision\Handler();</span>
-<span class="token inserted">+        }</span>
-<span class="token inserted">+        return parent::whoopsHandler();</span>
-<span class="token inserted">+    }</span>
-</code></pre>
-<p><strong>app/Http/Middleware/TrustProxies.php*</strong></p>
-<pre class=" language-diff"><code class="language-diff"><span class="token deleted">-    /**</span>
-<span class="token deleted">-     * The current proxy header mappings.</span>
-<span class="token deleted">-     *</span>
-<span class="token deleted">-     * @var array</span>
-<span class="token deleted">-     */</span>
-<span class="token deleted">-    protected $headers = [</span>
-<span class="token deleted">-        Request::HEADER_FORWARDED         => 'FORWARDED',</span>
-<span class="token deleted">-        Request::HEADER_X_FORWARDED_FOR   => 'X_FORWARDED_FOR',</span>
-<span class="token deleted">-        Request::HEADER_X_FORWARDED_HOST  => 'X_FORWARDED_HOST',</span>
-<span class="token deleted">-        Request::HEADER_X_FORWARDED_PORT  => 'X_FORWARDED_PORT',</span>
-<span class="token deleted">-        Request::HEADER_X_FORWARDED_PROTO => 'X_FORWARDED_PROTO',</span>
-<span class="token deleted">-    ];</span>
-<span class="token inserted">+    protected $headers = Request::HEADER_X_FORWARDED_ALL;</span>
-</code></pre>
-<p><strong>composer.json b/composer.json</strong></p>
-<pre class=" language-diff"><code class="language-diff"><span class="token deleted">-        "fideloper/proxy": "~3.3",</span>
-<span class="token inserted">+        "fideloper/proxy": "~4.0",</span>
-<span class="token deleted">-        "laravel/framework": "5.5.*",</span>
-<span class="token inserted">+        "laravel/framework": "5.6.*",</span>
-<span class="token deleted">-        "roave/security-advisories": "dev-master",</span>
-<span class="token deleted">-        "phpunit/phpunit": "~6.0"</span>
-<span class="token inserted">+        "phpunit/phpunit": "~7.0"</span>
-</code></pre>
-<p><strong>config/app.php</strong></p>
-<pre class=" language-diff"><code class="language-diff"><span class="token deleted">-</span>
-<span class="token deleted">-    /*</span>
-<span class="token deleted">-    |--------------------------------------------------------------------------</span>
-<span class="token deleted">-    | Logging Configuration</span>
-<span class="token deleted">-    |--------------------------------------------------------------------------</span>
-<span class="token deleted">-    |</span>
-<span class="token deleted">-    | Here you may configure the log settings for your application. Out of</span>
-<span class="token deleted">-    | the box, Laravel uses the Monolog PHP logging library. This gives</span>
-<span class="token deleted">-    | you a variety of powerful log handlers / formatters to utilize.</span>
-<span class="token deleted">-    |</span>
-<span class="token deleted">-    | Available Settings: "single", "daily", "syslog", "errorlog"</span>
-<span class="token deleted">-    |</span>
-<span class="token deleted">-    */</span>
-<span class="token deleted">-</span>
-<span class="token deleted">-    'log' => env('APP_LOG', 'single'),</span>
-<span class="token deleted">-</span>
-<span class="token deleted">-    'log_level' => env('APP_LOG_LEVEL', 'debug'),</span>
-</code></pre>
-<p><strong>tests/CreatesApplication.php</strong></p>
-<pre class=" language-diff"><code class="language-diff"><span class="token inserted">+use Illuminate\Support\Facades\Hash</span>
-    ...
-         $app->make(Kernel::class)->bootstrap();
-<span class="token deleted">-</span>
-<span class="token inserted">+        Hash::driver('bcrypt')->setRounds(4);</span>
-         return $app;
-     }
-</code></pre>
-<p><strong><a href="https://github.com/laravel/laravel/tree/master/config" target="_blank" rel="noopener">https://github.com/laravel/laravel/tree/master/config</a></strong></p>
-<pre class=" language-diff"><code class="language-diff"><span class="token inserted">+ hashing.php</span>
-<span class="token inserted">+ logging.php</span>
-</code></pre>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://nayzawoo.github.io/blog/blog/2018/02/26/Laravel-Mix-Setup-For-Vue-Async-Components/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -474,7 +279,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nay Zaw Oo">
+      <meta itemprop="name" content="Notes">
     </span>
 
     
@@ -649,7 +454,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/blog/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
