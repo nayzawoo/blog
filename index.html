@@ -235,7 +235,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-11-08 13:50:57" itemprop="dateModified" datetime="2020-11-08T13:50:57+06:30">2020-11-08</time>
+        <time title="Modified: 2020-11-08 14:39:00" itemprop="dateModified" datetime="2020-11-08T14:39:00+06:30">2020-11-08</time>
       </span>
 
   
@@ -256,7 +256,7 @@
 <h3 id="Add-Webpack-Config-in-in-webpack-mix-js"><a href="#Add-Webpack-Config-in-in-webpack-mix-js" class="headerlink" title="Add Webpack Config in in webpack.mix.js"></a>Add Webpack Config in in <strong>webpack.mix.js</strong></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mix.webpackConfig(&#123;</span><br><span class="line">    output: &#123;</span><br><span class="line">        chunkFilename: <span class="string">&#x27;chunks/[name].[chunkhash].js&#x27;</span>,</span><br><span class="line">        publicPath: <span class="string">&#x27;/&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="Replace-Your-Code"><a href="#Replace-Your-Code" class="headerlink" title="Replace Your Code"></a>Replace Your Code</h3><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- Vue.component(&#x27;example&#x27;, require(&#x27;./components/ExampleComponent.vue&#x27;));</span></span><br><span class="line"><span class="addition">+ Vue.component(&#x27;example&#x27;, () =&gt; import(&#x27;./components/ExampleComponent.vue&#x27;));</span></span><br></pre></td></tr></table></figure>
+<h3 id="Replace-Your-Code"><a href="#Replace-Your-Code" class="headerlink" title="Replace Your Code"></a>Replace Your Code</h3><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- Vue.component(&#x27;example&#x27;, require(&#x27;./components/ExampleComponent.vue&#x27;))</span></span><br><span class="line"><span class="addition">+ Vue.component(&#x27;example&#x27;, () =&gt; import(&#x27;./components/ExampleComponent.vue&#x27;))</span></span><br></pre></td></tr></table></figure>
 
 
 <h3 id="Ref"><a href="#Ref" class="headerlink" title="Ref:"></a>Ref:</h3><ul>
