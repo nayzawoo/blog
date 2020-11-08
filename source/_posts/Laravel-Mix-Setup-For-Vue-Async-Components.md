@@ -31,8 +31,8 @@ mix.webpackConfig({
 ### Replace Your Code
 
 ```diff
-- Vue.component('example', require('./components/ExampleComponent.vue'));
-+ Vue.component('example', () => import('./components/ExampleComponent.vue'));
+- Vue.component('example', require('./components/ExampleComponent.vue'))
++ Vue.component('example', () => import('./components/ExampleComponent.vue'))
 ```
 
 
