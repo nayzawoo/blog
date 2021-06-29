@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: NayZawOo.COM
+title: BLOG.NAYZAWOO.COM
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
 subtitle: Notes
-description: NayZawOo.COM
+description: BLOG.NAYZAWOO.COM
 keywords:
 author: Nay Zaw Oo
 language: en
@@ -110,7 +110,7 @@ social:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-root: /blog/
+root: /
 
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
@@ -121,7 +121,7 @@ prism_plugin:
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
-	
+
 # Pagination
 ## Set per_page to 0 to disable pagination
 
